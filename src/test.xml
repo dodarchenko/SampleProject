@@ -1,0 +1,15 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name = "Tests">
+    <listeners>
+        <listener class-name="report.TestResultListener"/>
+    </listeners>
+    <test name = "Test">
+        <parameter name="environmentURL" value="http://automationpractice.com/index.php/"></parameter>
+        <parameter name="existingEmail" value="dodarchenko+autotests@spotware.com"></parameter>
+        <parameter name="password" value="Testing1"></parameter>
+
+        <classes>
+            <class name="tests.functional.authorizationPage.SignInTest"></class>
+        </classes>
+    </test>
+</suite>
