@@ -83,4 +83,7 @@ public class MainPageFactory extends BaseTest {
        int size = productsInCart.size();
        return  size;
     }
+    public void loginButtonClick(){
+        loginButton.click();
+    }
 }
