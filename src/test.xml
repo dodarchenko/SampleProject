@@ -1,5 +1,5 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name = "Tests">
+<suite name = "tests">
     <listeners>
         <listener class-name="report.TestResultListener"/>
     </listeners>
@@ -9,7 +9,7 @@
         <parameter name="password" value="Testing1"></parameter>
 
         <classes>
-            <class name="tests.functional.authorizationPage.SignInTest"></class>
+            <class name="tests.MainPageTests"></class>
         </classes>
     </test>
 </suite>
