@@ -75,6 +75,18 @@ public class AuthPageFactory extends BaseTest {
     @FindBy(id = "id_state")
     WebElement stateSelector;
 
+    @FindBy (className = "logout")
+    WebElement logoutButton;
+
+    @FindBy(xpath = "//span[contains(text(),'Dmytro Odarchenko')]")
+    public WebElement accountName;
+
+    @FindBy (className = "info-account")
+    public WebElement accountInfo;
+
+    @FindBy(className = "alert alert-danger")
+    public WebElement alertBlock;
+
     public AuthPageFactory(WebDriver driver){
         this.driver = driver;
         PageFactory.initElements(driver, this);
@@ -139,5 +151,12 @@ public class AuthPageFactory extends BaseTest {
 
     public void registerButtonClick(){
         registerButton.click();
+    }
+
+    public void signInButtonClick(){
+        signInButton.click();
+    }
+    public void logoutButtonClick(){
+        logoutButton.click();
     }
 }

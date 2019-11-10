@@ -39,9 +39,43 @@ public class AuthPageTests extends BaseTest {
             authPageFactory.setPostcode("09000");
             authPageFactory.setMobilePhone("0001112312");
             authPageFactory.registerButtonClick();
-            //Need to add assertion
+            Assert.assertTrue(authPageFactory.accountInfo.isDisplayed());
+            authPageFactory.logoutButtonClick();
         } catch (Exception e) {
             ExtentTestManager.getTest().log(LogStatus.ERROR, e.getMessage());
+            authPageFactory.logoutButtonClick();
+            Assert.fail();
+        }
+    }
+
+    @Test
+    public void checkValidation() {
+        ExtentTestManager.getTest().setDescription("Test sign in validation");
+        try {
+            mainPageFactory.loginButtonClick();
+            authPageFactory.setSignInEmail("emaildoesntexist@gmail.com");
+            authPageFactory.setPasswordField("123456");
+            authPageFactory.signInButtonClick();
+            Assert.assertTrue(authPageFactory.alertBlock.isDisplayed());
+        } catch (Exception e) {
+            ExtentTestManager.getTest().log(LogStatus.ERROR, e.getMessage());
+            Assert.fail();
+        }
+    }
+
+    @Test
+    public void checkSignIn() {
+        ExtentTestManager.getTest().setDescription("Test sign in with valida data");
+        try {
+            mainPageFactory.loginButtonClick();
+            authPageFactory.setSignInEmail("fortest@test.com");
+            authPageFactory.setPasswordField("12345");
+            authPageFactory.signInButtonClick();
+            Assert.assertTrue(authPageFactory.accountName.isDisplayed());
+            authPageFactory.logoutButtonClick();
+        } catch (Exception e) {
+            ExtentTestManager.getTest().log(LogStatus.ERROR, e.getMessage());
+            authPageFactory.logoutButtonClick();
             Assert.fail();
         }
     }

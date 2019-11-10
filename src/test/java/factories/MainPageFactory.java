@@ -55,6 +55,9 @@ public class MainPageFactory extends BaseTest {
     @FindBy (className = "product-image-container")
     public List <WebElement> searchResult;
 
+    @FindBy(xpath = "//img[@class='logo img-responsive']")
+    WebElement mainLogo;
+
 
 
     public MainPageFactory(WebDriver driver){
@@ -85,5 +88,9 @@ public class MainPageFactory extends BaseTest {
     }
     public void loginButtonClick(){
         loginButton.click();
+    }
+
+    public void logoClick(){
+        mainLogo.click();
     }
 }

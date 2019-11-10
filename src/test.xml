@@ -9,7 +9,7 @@
         <parameter name="password" value="Testing1"></parameter>
 
         <classes>
-            <class name="tests.AuthPageTests"></class>
+            <class name="tests.CheckoutTests"></class>
         </classes>
     </test>
 </suite>
