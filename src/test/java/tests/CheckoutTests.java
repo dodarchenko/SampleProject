@@ -21,7 +21,7 @@ public class CheckoutTests extends BaseTest {
     JavascriptExecutor js;
 
 
-    @BeforeClass
+    @BeforeClass(alwaysRun = true)
     public void beforeClass(){
         mainPageFactory = new MainPageFactory(driver);
         authPageFactory = new AuthPageFactory(driver);
@@ -30,7 +30,7 @@ public class CheckoutTests extends BaseTest {
         js = ((JavascriptExecutor) driver);
     }
 
-    @Test
+    @Test(groups = {"endToEnd"})
     public void endToEndTest() {
         ExtentTestManager.getTest().setDescription("Test sign in, add to cart, proceed to checkout, finish order");
         try {

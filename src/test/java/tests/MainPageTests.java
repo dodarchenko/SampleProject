@@ -23,7 +23,7 @@ public class MainPageTests extends BaseTest {
     JavascriptExecutor js;
     WebDriverWait wait;
 
-    @BeforeClass
+    @BeforeClass(alwaysRun = true)
     public void beforeClass(){
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         mainPageFactory = new MainPageFactory(driver);
@@ -31,7 +31,7 @@ public class MainPageTests extends BaseTest {
         js = ((JavascriptExecutor) driver);
     }
 
-   @Test
+   @Test(groups = {"locateElement"})
     public void checkSliderPresence(){
         try{
         ExtentTestManager.getTest().setDescription("Check presence of slider element");
@@ -42,7 +42,7 @@ public class MainPageTests extends BaseTest {
         }
     }
 
-    @Test
+    @Test(groups = {"locateElement"})
     public void checkCartPresence(){
         try{
             ExtentTestManager.getTest().setDescription("Check presence of shopping cart element");
@@ -53,7 +53,7 @@ public class MainPageTests extends BaseTest {
         }
     }
 
-    @Test
+    @Test(groups = {"cart", "baseFlow"})
     public void addItemToCart(){
         ExtentTestManager.getTest().setDescription("Test adding item to the shopping cart");
         try {
@@ -76,7 +76,7 @@ public class MainPageTests extends BaseTest {
         }
     }
 
-    @Test
+    @Test(groups = {"cart", "baseFlow"})
     public void removeItemFromCart() {
         ExtentTestManager.getTest().setDescription("Test removing item from the shopping cart");
         try {
@@ -94,7 +94,7 @@ public class MainPageTests extends BaseTest {
         }
     }
 
-    @Test
+    @Test(groups = {"search", "baseFlow"})
     public void searchForItem() {
         ExtentTestManager.getTest().setDescription("Test search of item");
         try {

@@ -5,6 +5,7 @@ import com.relevantcodes.extentreports.ExtentTest;
 import java.util.HashMap;
 import java.util.Map;
 
+@SuppressWarnings("unchecked")
 public class ExtentTestManager {
     static final Map extentTestMap = new HashMap();
     static final ExtentReports extent = ExtentFactory.getInstance();

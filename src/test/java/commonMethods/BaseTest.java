@@ -17,18 +17,23 @@ public class BaseTest {
         return driver;
     }
 
-    @BeforeClass
-    @Parameters({"environmentURL"})
-    public void setup(String environmentURL) {
-//           System.setProperty("webdriver.gecko.driver","src\\drivers\\geckodriver.exe");
-//            driver = new FirefoxDriver();
-        System.setProperty("webdriver.chrome.driver","src\\drivers\\chromedriver3.exe");
-        driver = new ChromeDriver();
+    @BeforeClass(alwaysRun = true)
+    @Parameters({"environmentURL", "browser"})
+    public void setup(String environmentURL, String browser) {
+
+        if(browser.equals("firefox")){
+            System.setProperty("webdriver.gecko.driver","src\\drivers\\geckodriver.exe");
+           driver = new FirefoxDriver();
+        }else {
+            System.setProperty("webdriver.chrome.driver", "src\\drivers\\chromedriver3.exe");
+            driver = new ChromeDriver();
+        }
+
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
         driver.get(environmentURL);
     }
-    @AfterClass
+    @AfterClass(alwaysRun = true)
     public void tearDown() {
         driver.quit();
     }

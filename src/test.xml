@@ -5,11 +5,30 @@
     </listeners>
     <test name = "Test">
         <parameter name="environmentURL" value="http://automationpractice.com/index.php/"></parameter>
-        <parameter name="existingEmail" value="dodarchenko+autotests@spotware.com"></parameter>
-        <parameter name="password" value="Testing1"></parameter>
+        <parameter name="browser" value="chrome"></parameter>
 
-        <classes>
-            <class name="tests.CheckoutTests"></class>
-        </classes>
+           <groups>
+            <define name="all">
+                <include name="auth"></include>
+                <include name="validation"></include>
+                <include name="search"></include>
+                <include name="baseFlow"></include>
+                <include name="cart"></include>
+                <include name="locateElement"></include>
+                <include name="endToEnd"></include>
+            </define>
+            <define name="smoke">
+                <include name="endToEnd"></include>
+                <include name="auth"></include>
+            </define>
+            <run>
+                <include name="smoke"></include>
+            </run>
+        </groups>
+            <classes>
+                <class name="tests.MainPageTests"></class>
+                <class name="tests.AuthPageTests"></class>
+                <class name="tests.CheckoutTests"></class>
+            </classes>
     </test>
 </suite>

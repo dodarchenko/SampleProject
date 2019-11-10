@@ -22,17 +22,8 @@ public class MainPageFactory extends BaseTest {
     @FindBy(xpath = "(//div[@class='product-image-container'])[2]")
     WebElement secondItemInPopular;
 
-    @FindBy(xpath = "//a[@title='Women']")
-    WebElement womenTab;
-
-    @FindBy (xpath = "//a[@class='quick-view']")
-    WebElement quickViewButton;
-
     @FindBy (xpath = "//span[contains(text(), 'Add to cart')]")
     WebElement addToCartButton;
-
-    @FindBy (xpath = "//span[contains(text(), 'More')]")
-    WebElement seeMoreButton;
 
     @FindBy (xpath = "//button[@name='submit_search']")
     WebElement searchButton;

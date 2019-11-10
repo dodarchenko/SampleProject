@@ -24,14 +24,8 @@ public class AuthPageFactory extends BaseTest {
     @FindBy(id = "SubmitLogin")
     WebElement signInButton;
 
-    @FindBy(linkText = "Forgot your password?")
-    WebElement forgotPasswordLink;
-
     @FindBy(id = "id_gender1")
     WebElement maleGenderRadioButton;
-
-    @FindBy(id = "id_gender2")
-    WebElement femaleGenderRadioButton;
 
     @FindBy(id = "customer_firstname")
     WebElement firstNameField;
@@ -39,14 +33,8 @@ public class AuthPageFactory extends BaseTest {
     @FindBy(id = "customer_lastname")
     WebElement lastNameField;
 
-    @FindBy(id = "company")
-    WebElement companyField;
-
     @FindBy(id = "address1")
     WebElement addressLine1Field;
-
-    @FindBy(id = "address2")
-    WebElement addressLine2Field;
 
     @FindBy(id = "city")
     WebElement cityField;
@@ -57,20 +45,8 @@ public class AuthPageFactory extends BaseTest {
     @FindBy(id = "phone_mobile")
     WebElement mobilePhoneField;
 
-    @FindBy(id = "alias")
-    WebElement aliasAddressField;
-
     @FindBy(id = "submitAccount")
     WebElement registerButton;
-
-    @FindBy(id = "days")
-    WebElement daysSelector;
-
-    @FindBy(id = "months")
-    WebElement monthsSelector;
-
-    @FindBy(id = "years")
-    WebElement yearsSelector;
 
     @FindBy(id = "id_state")
     WebElement stateSelector;
@@ -84,7 +60,7 @@ public class AuthPageFactory extends BaseTest {
     @FindBy (className = "info-account")
     public WebElement accountInfo;
 
-    @FindBy(className = "alert alert-danger")
+    @FindBy(xpath = "//div[@class='alert alert-danger']")
     public WebElement alertBlock;
 
     public AuthPageFactory(WebDriver driver){

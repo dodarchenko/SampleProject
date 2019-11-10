@@ -56,8 +56,7 @@ public class CheckoutFactory extends BaseTest {
     }
 
     public double getPrice(WebElement element){
-        double price = Double.parseDouble(element.getText().substring(1));
-        return price;
+        return Double.parseDouble(element.getText().substring(1));
     }
 
     public boolean checkCheckoutCalculations(){
