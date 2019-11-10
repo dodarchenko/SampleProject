@@ -5,7 +5,6 @@ import commonMethods.BaseTest;
 import commonMethods.CommonMethods;
 import factories.MainPageFactory;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -17,11 +16,11 @@ import java.util.concurrent.TimeUnit;
 
 public class MainPageTests extends BaseTest {
 
-    MainPageFactory mainPageFactory;
-    CommonMethods commonMethods;
-    int itemsInCart;
-    JavascriptExecutor js;
-    WebDriverWait wait;
+    private MainPageFactory mainPageFactory;
+    private CommonMethods commonMethods;
+    private int itemsInCart;
+    private JavascriptExecutor js;
+    private WebDriverWait wait;
 
     @BeforeClass(alwaysRun = true)
     public void beforeClass(){

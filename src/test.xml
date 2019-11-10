@@ -22,7 +22,7 @@
                 <include name="auth"></include>
             </define>
             <run>
-                <include name="smoke"></include>
+                <include name="all"></include>
             </run>
         </groups>
             <classes>

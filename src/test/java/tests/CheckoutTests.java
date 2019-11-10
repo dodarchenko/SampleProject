@@ -14,11 +14,11 @@ import report.ExtentTestManager;
 
 public class CheckoutTests extends BaseTest {
 
-    AuthPageFactory authPageFactory;
-    MainPageFactory mainPageFactory;
-    CommonMethods commonMethods;
-    CheckoutFactory checkoutFactory;
-    JavascriptExecutor js;
+    private AuthPageFactory authPageFactory;
+    private MainPageFactory mainPageFactory;
+    private CommonMethods commonMethods;
+    private CheckoutFactory checkoutFactory;
+    private JavascriptExecutor js;
 
 
     @BeforeClass(alwaysRun = true)

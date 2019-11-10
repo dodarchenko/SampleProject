@@ -10,48 +10,63 @@ import org.openqa.selenium.support.ui.Select;
 public class AuthPageFactory extends BaseTest {
 
     @FindBy (id = "email_create")
+    private
     WebElement signUpEmailField;
 
     @FindBy(id = "SubmitCreate")
+    private
     WebElement createAccountButton;
 
     @FindBy(id = "email")
+    private
     WebElement signInEmailField;
 
     @FindBy(id = "passwd")
+    private
     WebElement passwordField;
 
     @FindBy(id = "SubmitLogin")
+    private
     WebElement signInButton;
 
     @FindBy(id = "id_gender1")
+    private
     WebElement maleGenderRadioButton;
 
     @FindBy(id = "customer_firstname")
+    private
     WebElement firstNameField;
 
     @FindBy(id = "customer_lastname")
+    private
     WebElement lastNameField;
 
     @FindBy(id = "address1")
+    private
     WebElement addressLine1Field;
 
     @FindBy(id = "city")
+    private
     WebElement cityField;
 
     @FindBy(id = "postcode")
+    private
     WebElement postcodeField;
 
     @FindBy(id = "phone_mobile")
+    private
     WebElement mobilePhoneField;
 
     @FindBy(id = "submitAccount")
+    private
     WebElement registerButton;
 
     @FindBy(id = "id_state")
+    private
     WebElement stateSelector;
 
     @FindBy (className = "logout")
+    private
     WebElement logoutButton;
 
     @FindBy(xpath = "//span[contains(text(),'Dmytro Odarchenko')]")

@@ -11,9 +11,9 @@ import org.testng.annotations.Test;
 import report.ExtentTestManager;
 
 public class AuthPageTests extends BaseTest {
-    AuthPageFactory authPageFactory;
-    MainPageFactory mainPageFactory;
-    CommonMethods commonMethods;
+    private AuthPageFactory authPageFactory;
+    private MainPageFactory mainPageFactory;
+    private CommonMethods commonMethods;
 
     @BeforeClass(alwaysRun = true)
     public void beforeClass(){

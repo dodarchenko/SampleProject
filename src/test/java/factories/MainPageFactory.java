@@ -11,9 +11,11 @@ import java.util.List;
 public class MainPageFactory extends BaseTest {
 
     @FindBy (className = "login")
+    private
     WebElement loginButton;
 
     @FindBy (id = "search_query_top")
+    private
     WebElement searchField;
 
     @FindBy(xpath = "(//div[@class='product-image-container'])[1]")
@@ -23,9 +25,11 @@ public class MainPageFactory extends BaseTest {
     WebElement secondItemInPopular;
 
     @FindBy (xpath = "//span[contains(text(), 'Add to cart')]")
+    private
     WebElement addToCartButton;
 
     @FindBy (xpath = "//button[@name='submit_search']")
+    private
     WebElement searchButton;
 
     @FindBy (id = "homeslider")
@@ -38,15 +42,18 @@ public class MainPageFactory extends BaseTest {
     public WebElement closePopUp;
 
     @FindBy (className = "remove_link")
+    private
     WebElement removeFromCartButton;
 
     @FindBy (xpath = "//dl[@class='products']/dt")
+    private
     List<WebElement> productsInCart;
 
     @FindBy (className = "product-image-container")
     public List <WebElement> searchResult;
 
     @FindBy(xpath = "//img[@class='logo img-responsive']")
+    private
     WebElement mainLogo;
 
 
@@ -74,8 +81,7 @@ public class MainPageFactory extends BaseTest {
     }
 
     public int getSizeOfProductInCart(){
-       int size = productsInCart.size();
-       return  size;
+        return productsInCart.size();
     }
     public void loginButtonClick(){
         loginButton.click();
